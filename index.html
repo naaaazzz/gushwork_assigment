@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mangalam HDPE Pipes</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     STICKY HEADER (appears on scroll)
+══════════════════════════════════════ -->
+<div id="sticky-header" class="sticky-header sticky-header--hidden">
+  <div class="sticky-header__inner container">
+    <div class="sticky-header__left">
+      <div class="brand-logo brand-logo--mini" aria-label="Mangalam HDPE Pipes">
+        <span class="brand-logo__wordmark">Mangalam</span>
+        <span class="brand-logo__subline">
+          <span>HDPE</span>
+          <span class="brand-logo__divider"></span>
+          <span>PIPES</span>
+        </span>
+      </div>
+      <div class="sticky-header__info">
+        <span class="sticky-header__title">Premium HDPE Pipes &amp; Coils for Modern Infrastructure</span>
+        <span class="sticky-header__price">₹4,80,000 – 7,90,000</span>
+      </div>
+    </div>
+    <button class="btn btn--primary btn--sm" onclick="openModal('quote')">Get Custom Quote</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav id="main-nav" class="navbar">
+  <div class="navbar__inner container">
+    <div class="navbar__brand">
+      <div class="brand-logo" aria-label="Mangalam HDPE Pipes">
+        <span class="brand-logo__wordmark">Mangalam</span>
+        <span class="brand-logo__subline">
+          <span>HDPE</span>
+          <span class="brand-logo__divider"></span>
+          <span>PIPES</span>
+        </span>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="navbar__links" id="nav-links">
+      <a href="#hero" onclick="closeMenu()">About Us</a>
+      <a href="#products" class="navbar__link--dropdown" onclick="closeMenu()">Products <span aria-hidden="true">&#9662;</span></a>
+      <button class="btn btn--primary btn--sm navbar__contact-btn" onclick="openModal('quote'); closeMenu()">Contact Us</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO SECTION
+══════════════════════════════════════ -->
+<section id="hero" class="hero">
+  <div class="container hero__inner">
+
+    <!-- Carousel -->
+    <div class="carousel">
+      <div class="carousel__viewport">
+        <div class="carousel__track" id="carousel-track">
+          <div class="carousel__slide">
+            <img src="https://images.unsplash.com/photo-1635348729745-9a55f4e49e4c?w=800&q=80" alt="HDPE Pipe coils" loading="eager"/>
+          </div>
+          <div class="carousel__slide">
+            <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80" alt="HDPE Pipe manufacturing" loading="lazy"/>
+          </div>
+          <div class="carousel__slide">
+            <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=800&q=80" alt="HDPE Pipe installation" loading="lazy"/>
+          </div>
+        </div>
+      </div>
+      <button class="carousel__btn carousel__btn--prev" onclick="prevSlide()" aria-label="Previous">&#8249;</button>
+      <button class="carousel__btn carousel__btn--next" onclick="nextSlide()" aria-label="Next">&#8250;</button>
+      <div class="carousel__dots" id="carousel-dots">
+        <button class="carousel__dot carousel__dot--active" onclick="goToSlide(0)"></button>
+        <button class="carousel__dot" onclick="goToSlide(1)"></button>
+        <button class="carousel__dot" onclick="goToSlide(2)"></button>
+      </div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbs" id="thumbs">
+      <div class="thumb thumb--active" id="thumb-0" onclick="goToSlide(0)">
+        <div class="thumb__logo" aria-label="Mangalam HDPE Pipes logo">
+          <span class="thumb__logo-wordmark">Mangalam</span>
+          <span class="thumb__logo-subline">
+            <span>HDPE</span>
+            <span class="thumb__logo-divider"></span>
+            <span>PIPES</span>
+          </span>
+        </div>
+      </div>
+      <div class="thumb" id="thumb-1" onclick="goToSlide(1)">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=200&q=60" alt="Thumb 2"/>
+      </div>
+      <div class="thumb" id="thumb-2" onclick="goToSlide(2)">
+        <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=200&q=60" alt="Thumb 3"/>
+      </div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero__content">
+      <span class="badge">Industry-Grade Quality</span>
+      <h1 class="hero__title">Premium HDPE Pipes &amp; Coils for <span class="text-accent">Modern Infrastructure</span></h1>
+      <ul class="hero__checklist">
+        <li><span class="check">✓</span> BIS Certified PE 100 Raw Material</li>
+        <li><span class="check">✓</span> Pressure Ratings: PN 4 to PN 20</li>
+        <li><span class="check">✓</span> Sizes: 20mm to 1200mm OD</li>
+        <li><span class="check">✓</span> 50-Year Design Life</li>
+        <li><span class="check">✓</span> ISO 4427 / IS 4984 Compliant</li>
+      </ul>
+      <div class="price-box">
+        <span class="price-box__label">Price Range (per set)</span>
+        <span class="price-box__value">₹4,80,000 <span class="price-box__sep">–</span> ₹7,90,000</span>
+      </div>
+      <div class="hero__actions">
+        <button class="btn btn--primary" onclick="openModal('quote')">Get Custom Quote</button>
+        <button class="btn btn--outline" onclick="openModal('brochure')">Download Brochure</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Brand Strip -->
+  <div class="brand-strip">
+    <div class="container brand-strip__inner">
+      <span class="brand-pill">EUROPLEX</span>
+      <span class="brand-pill">EUROPLEX</span>
+      <span class="brand-pill">EUROPLEX</span>
+      <span class="brand-pill">EUROPLEX</span>
+      <span class="brand-pill">EUROPLEX</span>
+      <span class="brand-pill">EUROPLEX</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SPECIFICATIONS
+══════════════════════════════════════ -->
+<section id="specs" class="section section--white fade-in">
+  <div class="container">
+    <p class="section__tag">Technical Details</p>
+    <h2 class="section__title">Technical Specifications at a Glance</h2>
+    <p class="section__sub">Engineered to meet the most demanding infrastructure requirements. All specifications comply with international standards.</p>
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <tbody>
+          <tr><td class="spec-table__key">Material</td><td class="spec-table__val">PE 100 (High Density Polyethylene)</td></tr>
+          <tr><td class="spec-table__key">Raw Material Grade</td><td class="spec-table__val">BIS Certified, ISI Marked</td></tr>
+          <tr><td class="spec-table__key">Pressure Rating (PN)</td><td class="spec-table__val">PN 4, PN 6, PN 8, PN 10, PN 12.5, PN 16, PN 20</td></tr>
+          <tr><td class="spec-table__key">Size Range</td><td class="spec-table__val">20mm to 1200mm OD</td></tr>
+          <tr><td class="spec-table__key">Colour Identification</td><td class="spec-table__val">Blue / Black with Blue Stripes</td></tr>
+          <tr><td class="spec-table__key">Available Lengths</td><td class="spec-table__val">Straight (6m / 12m) or Coils</td></tr>
+          <tr><td class="spec-table__key">Design Life</td><td class="spec-table__val">50 Years at 20°C</td></tr>
+          <tr><td class="spec-table__key">Certifications</td><td class="spec-table__val">ISO 4427, IS 4984, EN 12201</td></tr>
+          <tr><td class="spec-table__key">Joint Methods</td><td class="spec-table__val">Butt Fusion / Electrofusion / Mechanical</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="btn-link" onclick="openModal('brochure')">⬇ Download Full Specifications PDF</button>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FEATURES
+══════════════════════════════════════ -->
+<section class="section section--gray fade-in">
+  <div class="container">
+    <p class="section__tag">Why Choose Us</p>
+    <h2 class="section__title">Built to Last. Engineered to Perform.</h2>
+    <p class="section__sub">From sourcing to delivery, every step of our piping system is designed for long-term reliability and safety.</p>
+    <div class="grid grid--3">
+      <div class="feature-card">
+        <div class="feature-card__icon">🏗️</div>
+        <h3 class="feature-card__title">Superior Raw Materials</h3>
+        <p class="feature-card__text">We source only BIS-certified PE 100 grade material ensuring consistent melt flow and long-term hydrostatic strength in every batch.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">⚙️</div>
+        <h3 class="feature-card__title">Consistent Wall Thickness</h3>
+        <p class="feature-card__text">Precision extrusion technology ensures uniform SDR ratios and strict dimensional tolerances to meet pressure class requirements.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🧪</div>
+        <h3 class="feature-card__title">100% Third Party Testing</h3>
+        <p class="feature-card__text">Every batch undergoes hydrostatic, tensile, OIT and carbon black dispersion tests at NABL-accredited laboratories.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🚚</div>
+        <h3 class="feature-card__title">Pan-India Delivery</h3>
+        <p class="feature-card__text">Pan-India delivery with proper coil/pipe packaging. Custom lengths available for large government infrastructure projects.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">📋</div>
+        <h3 class="feature-card__title">Full Documentation</h3>
+        <p class="feature-card__text">Mill certificates, test reports, and IS 4984/ISO 4427 conformity documentation included with every shipment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🛡️</div>
+        <h3 class="feature-card__title">Certified Quality Solutions</h3>
+        <p class="feature-card__text">ISO 9001 certified manufacturing plant with in-process quality control at every stage of production.</p>
+      </div>
+    </div>
+    <div class="section__cta">
+      <button class="btn btn--primary" onclick="openModal('quote')">Request a Quote</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FAQ
+══════════════════════════════════════ -->
+<section id="faq" class="section section--white fade-in">
+  <div class="container container--narrow">
+    <h2 class="section__title">Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What raw material is used in manufacturing these pipes?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We use only BIS-certified PE 100 grade high-density polyethylene sourced from reputed petrochemical companies. The material conforms to IS 4984 and ISO 4427 standards ensuring superior long-term hydrostatic strength and chemical resistance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What are the available pressure ratings and size ranges?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          We offer pressure ratings from PN 4 to PN 20 and sizes ranging from 20mm to 1200mm OD. Custom specifications are available for large-scale infrastructure and government projects on request.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is the minimum order quantity?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          The MOQ varies by pipe size. For smaller diameters (20–110mm), coils start from 100 meters. For larger diameters, straight lengths of 6m or 12m are available. Contact us for project-specific quantities.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What are the main application areas of HDPE pipes?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          HDPE pipes are widely used in water supply, sewage, irrigation, gas distribution, cable ducting, industrial process piping, mining slurry, and telecom conduit applications.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Want to download the complete product catalogue?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          Yes! You can download our complete product catalogue including detailed spec sheets, pressure tables, and application guides.
+          <button class="btn btn--primary btn--sm" style="margin-top:12px;" onclick="openModal('brochure')">Download Catalogue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     APPLICATIONS (ZOOM CARDS)
+══════════════════════════════════════ -->
+<section id="products" class="section section--dark fade-in">
+  <div class="container">
+    <p class="section__tag section__tag--light">Industries We Serve</p>
+    <h2 class="section__title section__title--light">Versatile Applications Across Industries</h2>
+    <p class="section__sub section__sub--light">From water supply to oil &amp; gas, our HDPE systems deliver in every environment.</p>
+    <div class="grid grid--4">
+      <div class="zoom-card">
+        <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&q=70" alt="Pipe Manufacturing" loading="lazy"/>
+        <div class="zoom-card__overlay"></div>
+        <div class="zoom-card__label">
+          <strong>Pipe Manufacturing</strong>
+          <span>Industrial solutions</span>
+        </div>
+      </div>
+      <div class="zoom-card">
+        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=70" alt="Fishnet Manufacturing" loading="lazy"/>
+        <div class="zoom-card__overlay"></div>
+        <div class="zoom-card__label">
+          <strong>Fishnet Manufacturing</strong>
+          <span>Marine applications</span>
+        </div>
+      </div>
+      <div class="zoom-card">
+        <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=500&q=70" alt="Water Infrastructure" loading="lazy"/>
+        <div class="zoom-card__overlay"></div>
+        <div class="zoom-card__label">
+          <strong>Water Infrastructure</strong>
+          <span>Municipal supply</span>
+        </div>
+      </div>
+      <div class="zoom-card">
+        <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=500&q=70" alt="Telecom Ducting" loading="lazy"/>
+        <div class="zoom-card__overlay"></div>
+        <div class="zoom-card__label">
+          <strong>Telecom Ducting</strong>
+          <span>Cable protection</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     MANUFACTURING PROCESS
+══════════════════════════════════════ -->
+<section class="section section--white fade-in">
+  <div class="container">
+    <h2 class="section__title">Advanced HDPE Pipe Manufacturing Process</h2>
+    <p class="section__sub">A streamlined, quality-first process that delivers consistent product performance every time.</p>
+    <div class="process-tabs" id="process-tabs">
+      <button class="process-tab process-tab--active" onclick="switchProcess(0,this)">Receive</button>
+      <button class="process-tab" onclick="switchProcess(1,this)">Blend</button>
+      <button class="process-tab" onclick="switchProcess(2,this)">Extrude</button>
+      <button class="process-tab" onclick="switchProcess(3,this)">Cool</button>
+      <button class="process-tab" onclick="switchProcess(4,this)">Print</button>
+      <button class="process-tab" onclick="switchProcess(5,this)">Testing</button>
+    </div>
+    <div class="process-body">
+      <div class="process-content">
+        <h3 id="process-title">High-Grade Raw Material Selection</h3>
+        <p id="process-desc">We start with incoming quality checks on all raw material lots. Only BIS-certified PE 100 compound batches with verified MFI and carbon black content are approved for production.</p>
+        <ul id="process-points">
+          <li>PE 100 Grade Compound</li>
+          <li>MFI: 0.2–0.4 g/10min</li>
+          <li>Carbon Black: 2–2.5%</li>
+        </ul>
+      </div>
+      <div class="process-image">
+        <img id="process-img" src="https://images.unsplash.com/photo-1635348729745-9a55f4e49e4c?w=700&q=80" alt="Manufacturing process"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════ -->
+<section class="section section--gray fade-in">
+  <div class="container">
+    <p class="section__tag">Client Reviews</p>
+    <h2 class="section__title">Trusted Performance. Proven Results.</h2>
+    <div class="grid grid--4">
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"</div>
+        <p class="testimonial-card__text">Excellent support for ground-level applications. Quality and delivery both on point for our municipal water project.</p>
+        <div class="testimonial-card__author">
+          <strong>Ramesh Menon</strong>
+          <span>PMC Contractor</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"</div>
+        <p class="testimonial-card__text">Flawless support for agricultural and irrigation projects. We have standardized on EuropeFlex for our district projects.</p>
+        <div class="testimonial-card__author">
+          <strong>Priya Nair</strong>
+          <span>Irrigation Engineer</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"</div>
+        <p class="testimonial-card__text">Professional support for ground-level installations. The documentation made audit approvals seamless.</p>
+        <div class="testimonial-card__author">
+          <strong>Arjun Das</strong>
+          <span>Site Supervisor</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-card__quote">"</div>
+        <p class="testimonial-card__text">We noticed significantly fewer joint failures compared to previous suppliers. Excellent technical team.</p>
+        <div class="testimonial-card__author">
+          <strong>Kavitha S.</strong>
+          <span>Project Director</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PRODUCT PORTFOLIO
+══════════════════════════════════════ -->
+<section class="section section--white fade-in">
+  <div class="container">
+    <h2 class="section__title">Complete Piping Solutions Portfolio</h2>
+    <p class="section__sub">From the pipe itself to fittings, installation services, and specialty products.</p>
+    <div class="grid grid--4">
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=400&q=70" alt="HDPE Fittings" loading="lazy"/>
+        </div>
+        <div class="product-card__body">
+          <h3>HDPE Fittings &amp; Accessories</h3>
+          <p>Complete range of butt fusion and electrofusion fittings for seamless connections.</p>
+          <button class="btn-link" onclick="openModal('quote')">Learn More →</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=70" alt="Installation" loading="lazy"/>
+        </div>
+        <div class="product-card__body">
+          <h3>Professional Installation Services</h3>
+          <p>Certified fusion technicians and project management from survey to commissioning.</p>
+          <button class="btn-link" onclick="openModal('quote')">Learn More →</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&q=70" alt="PE-RT Pipes" loading="lazy"/>
+        </div>
+        <div class="product-card__body">
+          <h3>PE-RT Venting Pipes</h3>
+          <p>High-temperature resistant PE-RT pipes for hot water and radiant floor systems.</p>
+          <button class="btn-link" onclick="openModal('quote')">Learn More →</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-card__img">
+          <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=400&q=70" alt="Irrigation" loading="lazy"/>
+        </div>
+        <div class="product-card__body">
+          <h3>Irrigation Solutions</h3>
+          <p>Drip, sprinkler, and mainline HDPE systems for agricultural applications.</p>
+          <button class="btn-link" onclick="openModal('quote')">Learn More →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     RESOURCES
+══════════════════════════════════════ -->
+<section class="section section--gray fade-in">
+  <div class="container">
+    <h2 class="section__title">Resources &amp; Downloads</h2>
+    <p class="section__sub">Everything you need to specify, design, and install our piping systems.</p>
+    <div class="resources-grid">
+      <a href="#" class="resource-item" onclick="openModal('brochure'); return false;">
+        <div class="resource-item__icon resource-item__icon--red">PDF</div>
+        <div>
+          <strong>Product Catalogue 2024</strong>
+          <span>Complete range with specifications</span>
+        </div>
+      </a>
+      <a href="#" class="resource-item" onclick="openModal('brochure'); return false;">
+        <div class="resource-item__icon resource-item__icon--blue">PDF</div>
+        <div>
+          <strong>Installation Guidelines</strong>
+          <span>Step-by-step field guide</span>
+        </div>
+      </a>
+      <a href="#" class="resource-item" onclick="openModal('brochure'); return false;">
+        <div class="resource-item__icon resource-item__icon--green">PDF</div>
+        <div>
+          <strong>Test Certificates Sample</strong>
+          <span>Third-party lab reports</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CTA BANNER
+══════════════════════════════════════ -->
+<section id="contact" class="cta-banner fade-in">
+  <div class="container cta-banner__inner">
+    <div>
+      <h2 class="cta-banner__title">Ready to Transform Your Textile Manufacturing?</h2>
+      <p class="cta-banner__sub">Talk to our technical team today. We'll help you select the right pipe spec for your project and provide a detailed quotation within 24 hours.</p>
+    </div>
+    <div class="cta-banner__actions">
+      <button class="btn btn--white" onclick="openModal('callback')">Request a Call Back</button>
+      <button class="btn btn--outline-white" onclick="openModal('brochure')">Download Catalogue</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <div class="logo-badge logo-badge--red">EF</div>
+        <span>EuropeFlex</span>
+      </div>
+      <p>Premium HDPE Pipes &amp; Coils Manufacturer in South India.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="#">HDPE Pipes</a></li>
+        <li><a href="#">HDPE Coils</a></li>
+        <li><a href="#">Fittings</a></li>
+        <li><a href="#">PE-RT Pipes</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Certifications</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <ul>
+        <li>info@europeflex.in</li>
+        <li>+91 98765 43210</li>
+        <li>Chennai, Tamil Nadu</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">© 2024 EuropeFlex. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════
+     MODAL: CALL BACK
+══════════════════════════════════════ -->
+<div id="modal-callback" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-callback-title">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal('callback')" aria-label="Close">✕</button>
+    <h2 class="modal__title" id="modal-callback-title">Request a call back</h2>
+    <div class="modal__body">
+      <input type="text" class="modal__input" placeholder="Full Name" autocomplete="name"/>
+      <input type="text" class="modal__input" placeholder="Company Name" autocomplete="organization"/>
+      <input type="email" class="modal__input" placeholder="Email Address" autocomplete="email"/>
+      <div class="modal__phone-row">
+        <select class="modal__select">
+          <option>+91</option><option>+1</option><option>+44</option><option>+971</option><option>+61</option>
+        </select>
+        <input type="tel" class="modal__input" placeholder="Phone Number" autocomplete="tel"/>
+      </div>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--primary" onclick="submitForm('callback')">Submit Form</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MODAL: QUOTE
+══════════════════════════════════════ -->
+<div id="modal-quote" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-quote-title">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal('quote')" aria-label="Close">✕</button>
+    <h2 class="modal__title" id="modal-quote-title">Get Custom Quote</h2>
+    <p class="modal__subtitle">Our team will respond within 24 hours with a detailed quotation.</p>
+    <div class="modal__body">
+      <input type="text" class="modal__input" placeholder="Full Name" autocomplete="name"/>
+      <input type="text" class="modal__input" placeholder="Company Name" autocomplete="organization"/>
+      <input type="email" class="modal__input" placeholder="Email Address" autocomplete="email"/>
+      <div class="modal__phone-row">
+        <select class="modal__select">
+          <option>+91</option><option>+1</option><option>+44</option><option>+971</option>
+        </select>
+        <input type="tel" class="modal__input" placeholder="Phone Number" autocomplete="tel"/>
+      </div>
+      <textarea class="modal__textarea" placeholder="Describe your requirement (size, quantity, pressure rating)..." rows="3"></textarea>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--primary" onclick="submitForm('quote')">Get My Quote</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     MODAL: BROCHURE
+══════════════════════════════════════ -->
+<div id="modal-brochure" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-brochure-title">
+  <div class="modal">
+    <button class="modal__close" onclick="closeModal('brochure')" aria-label="Close">✕</button>
+    <h2 class="modal__title" id="modal-brochure-title">Let us email the entire catalogue to you</h2>
+    <p class="modal__subtitle">Enter your details and we'll send the full product catalogue immediately.</p>
+    <div class="modal__body">
+      <label class="modal__label">Your Email <span class="modal__required">*</span></label>
+      <input type="email" class="modal__input" placeholder="example@gmail.com" autocomplete="email"/>
+      <label class="modal__label">Your Contact <span class="modal__optional">(Optional)</span></label>
+      <input type="tel" class="modal__input" placeholder="+91-0000000000" autocomplete="tel"/>
+    </div>
+    <div class="modal__footer">
+      <button class="btn btn--primary" onclick="submitForm('brochure')">Download Brochure</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast" role="status" aria-live="polite">
+  ✓ Submitted successfully! We'll be in touch soon.
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
